@@ -1,4 +1,5 @@
 import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 import logo from './logo.svg';
 import './App.scss';
 
@@ -9,10 +10,10 @@ function App() {
     <>
     <div className="App">
       <Header />
-      {/* <Hero />
+      {/* <Hero /> */}
       <Main />
-      <Comments />
-      <Next /> */}
+      {/* <Comments /> */}
+      {/* <Next />  */}
     </div>
     </>
   );
