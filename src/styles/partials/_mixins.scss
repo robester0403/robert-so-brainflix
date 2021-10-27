@@ -1,0 +1,64 @@
+
+
+@mixin m-pg-hdr-style {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@mixin m-sec-hdr-style {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+@mixin m-subhd-style {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+
+@mixin m-bdy-copy-style {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+
+@mixin m-lbls-btn-style {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+// Tablet and Desktop Styles
+@mixin dt-pg-hdr-style {
+  font-size: 2.0625rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+@mixin dt-sec-hdr-style {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+@mixin dt-subhd-style {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+}
+
+@mixin dt-bdy-copy-style {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+
+
+@mixin dt-lbls-btn-style {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
