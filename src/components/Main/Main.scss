@@ -1,0 +1,55 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/keyframes" as *;
+@use "../../styles/partials/global" as *;
+
+.vid-det{
+  margin: 0 1rem;
+
+  &__hdr{
+  padding: 1rem 0;
+  border-bottom: 1px solid $mercury;
+
+  }
+
+  &__stats-ctnr {
+    display: flex;
+    border-bottom: 1px solid $mercury;
+    padding: 1rem 0;
+    
+  }
+      
+  &__ch-date-ctnr {
+    @include m-bdy-copy-style;
+  }
+  
+  &__ch {
+    padding-bottom: 1rem;
+  }
+
+  &__date {
+    color: $silver;
+    font-weight: 400;
+  }
+          
+  &__view-like-ctnr {
+    @include m-bdy-copy-style;
+  }
+  
+  &__view {
+    padding-bottom: 1rem;
+    color: $silver;
+    font-weight: 400;
+  }
+
+  &__like {
+    color: $silver;
+    font-weight: 400;
+  }
+
+  &__des {
+    padding: 1rem 0;
+    @include m-bdy-copy-style
+  }
+}
