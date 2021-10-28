@@ -1,4 +1,17 @@
+@use "variables" as *;
+@use "colors" as *;
 
+@mixin tablet {
+  @media (min-width: $tablet) {
+      @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+      @content;
+  }
+}
 
 @mixin m-pg-hdr-style {
   font-size: 1.5rem;

@@ -1,0 +1,13 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.next {
+  margin: 0 1rem;
+
+  &__title {
+    @include m-bdy-copy-style;
+    color: $silver;
+    margin-bottom: 0.5rem;
+  }
+}
