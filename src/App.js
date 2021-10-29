@@ -10,17 +10,28 @@ import vidDetArr from './data/videodetails.json';
 import vidArr from './data/videos.json'
 
 
+
+
 class App extends Component {
   state = {
     selectedVid: vidDetArr[0],
     nextVidDet: vidArr
   }
 
+  handleVidSelect = (id) => {
+    this.setState({
+      selectedVid: vidDetArr.find((vid) => vid.id === id)
+    })
+  };
+
+
   render () {
     document.title = "Robert So Brainflix";
     // filter out the video selected
-    const vidDetFilterArr = vidDetArr.filter((video)=> video.id !==  this.state.selectedVid.id)
+    // const vidDetFilterArr = vidDetArr.filter((video)=> video.id !==  this.state.selectedVid.id)
     const nextVidFilterArr = vidArr.filter((video)=> video.id !==  this.state.selectedVid.id)
+    
+    
     return(
     <>
     <div className="App">
@@ -37,7 +48,8 @@ class App extends Component {
       />
       <NextList
       // we will process this array later with filter
-        nextVids={this.state.nextVidDet}
+        onVidSelect={this.handleVidSelect}
+        nextVids={nextVidFilterArr}
       /> 
     </div>
     </>
