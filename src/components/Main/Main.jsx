@@ -10,31 +10,32 @@ import './Main.scss';
 
 
 function Main(props) {
+  console.log (props)
   return (
     <section className="vid-det">
       <h1 className="vid-det__hdr">
-        {props.title}
+        {props.selectedVid.title}
       </h1>
       <article className="vid-det__stats-ctnr">
         <div className="vid-det__ch-date-ctnr">
           <h3 className="vid-det__ch">
-            By {props.channel}
+            By {props.selectedVid.channel}
           </h3>
           <h4 className="vid-det__date">
-            {props.timestamp}
+            {props.selectedVid.timestamp}
           </h4>
         </div>
         <div className="vid-det__view-like-ctnr">
           <h4 className="vid-det__view">
-            {props.views}
+            {props.selectedVid.views}
           </h4>
           <h4 className="vid-det__like">
-            {props.likes}
+            {props.selectedVid.likes}
           </h4>
         </div>
       </article>
       <article className="vid-det__des">
-        {props.description}
+        {props.selectedVid.description}
       </article>
     </section>
   )

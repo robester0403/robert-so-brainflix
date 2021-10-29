@@ -1,46 +1,44 @@
-import './App.scss';
+
 import { Component } from 'react';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Main from './components/Main/Main';
-import Comments from './components/Comments/Comments';
-import Next from './components/Next/Next';
+import CommentsList from './components/CommentsList/CommentsList';
+import NextList from './components/NextList/NextList';
+
 import vidDetArr from './data/videodetails.json';
 import vidArr from './data/videos.json'
-import logo from './assets/images/Logo/BrainFlix-logo.svg'
-import react from 'react';
 
-
-  // document.title = "Robert So Brainflix";
 
 class App extends Component {
   state = {
-    videoDetails: vidDetArr,
+    selectedVid: vidDetArr[0],
     nextVidDet: vidArr
   }
 
   render () {
-
+    document.title = "Robert So Brainflix";
+    // filter out the video selected
+    const vidDetFilterArr = vidDetArr.filter((video)=> video.id !==  this.state.selectedVid.id)
+    const nextVidFilterArr = vidArr.filter((video)=> video.id !==  this.state.selectedVid.id)
     return(
     <>
     <div className="App">
       <Header />
-      <Hero />
-      <Main
-// title
-// channel
-// timestamp
-// views
-// likes
-        title={this.state.videoDetails[0].title}
-        channel={this.state.videoDetails[0].channel}
-        timestamp={this.state.videoDetails[0].timestamp}
-        views={this.state.videoDetails[0].views}
-        likes={this.state.videoDetails[0].likes}
-        description={this.state.videoDetails[0].description}
+      <Hero
+        selectedVid={this.state.selectedVid}
       />
-      <Comments />
-      <Next /> 
+      <Main
+        selectedVid={this.state.selectedVid}
+      />
+      <CommentsList 
+      // note this one is a bit different because we are accessing a deeper level
+        comments={this.state.selectedVid.comments} 
+      />
+      <NextList
+      // we will process this array later with filter
+        nextVids={this.state.nextVidDet}
+      /> 
     </div>
     </>
   )}

@@ -1,14 +1,14 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/keyframes" as *;
-@use "../../styles/partials/global" as *;
 
-.hero {
+.next {
   margin: 0 1rem;
 
-  &__video {
-    width: 100%;
-    
+  &__header {
+    @include m-bdy-copy-style;
+    color: $silver;
+    margin-bottom: 0.5rem;
   }
+
 }

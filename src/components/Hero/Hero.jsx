@@ -1,11 +1,14 @@
 import './Hero.scss';
-import logo from '../../assets/images/Logo/BrainFlix-logo.svg';
-import mohanavatar from '../../assets/images/Mohan-muruge.jpg';
 
 
-function Hero() {
+function Hero(props) {
+  console.log(props.selectedVid.image)
   return (
-    false
+    <section className="hero">
+      <video poster={props.selectedVid.image} alt={`${props.selectedVid.title} Movie Poster`} controls className="hero__video">
+        Your browser does not support the video tag.
+      </video>
+    </section>
   )
 }
 
