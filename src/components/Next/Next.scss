@@ -10,4 +10,33 @@
     color: $silver;
     margin-bottom: 0.5rem;
   }
+
+  &__card {
+    @include m-bdy-copy-style;
+    width: 21.5rem;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__card-img {
+    border-radius: 2px;
+    width: 42%;
+    height: 5rem;
+    background-color: $mercury;
+    object-fit: cover;
+  }
+
+  &__title {
+    
+    width:58%;
+    color: black;
+    font-weight: 600;
+    padding-left: 1rem;
+  }
+
+  &__channel {
+    color: black;
+    font-weight: 400;
+    padding-left: 1rem;
+  }
 }
