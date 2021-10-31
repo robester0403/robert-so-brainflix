@@ -1,5 +1,6 @@
 import './Main.scss';
-
+import views from "../../assets/images/Icons/views.svg"
+import likes from "../../assets/images/Icons/likes.svg"
 // props
 // title
 // ch
@@ -27,9 +28,11 @@ function Main(props) {
         </div>
         <div className="vid-det__view-like-ctnr">
           <h4 className="vid-det__view">
+            <img className="vid-det__view-icon" src={views}/>
             {props.selectedVid.views}
           </h4>
           <h4 className="vid-det__like">
+            <img className="vid-det__view-icon" src={likes}/>
             {props.selectedVid.likes}
           </h4>
         </div>

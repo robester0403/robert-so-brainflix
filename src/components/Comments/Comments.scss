@@ -3,20 +3,7 @@
 @use "../../styles/partials/variables" as *;
 
 .comment {
-  &__wrap{
-    margin: 01rem;
-  }
 
-  &__card{
-  display: flex;
-  border-bottom: 0.1rem solid $mercury;
-  margin-bottom: 0.5rem;
-    
-    @include tablet {
-      width: 40rem;
-      margin: 0 auto;
-    }
-  }
 
   &__avatar {
     border-radius: 50%;
@@ -101,7 +88,15 @@
 .comments {
   display: flex;
   border-bottom: 0.1rem solid $mercury;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
+
+  @include tablet {
+  padding-bottom: 1.25rem;
+  }
+
+  &__wrap{
+    margin: 1rem;
+  }
 
   &__container {
     @include tablet {

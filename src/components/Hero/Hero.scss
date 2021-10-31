@@ -5,10 +5,21 @@
 @use "../../styles/partials/global" as *;
 
 .hero {
-  margin: 0 1rem;
+  background-color: black;
+
+  &__ctnr{
+    width: 25rem;
+    object-fit: fill;
+
+  }
 
   &__video {
     width: 100%;
+
+
     
+    @include tablet{
+      max-width: 45rem;
+    }
   }
 }

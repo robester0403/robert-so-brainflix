@@ -3,17 +3,17 @@ import './NextList.scss'
 
 
 
-function NextList(props, onVidSelect) {
-  console.log(props)
+function NextList({nextVids, onVidSelect}) {
+
   console.log(onVidSelect)
   return (
     <>
-      <section className="next">
+      <section className="next__wrapper">
         <h3 className="next__header"> 
           NEXT VIDEOS
         </h3>
           {
-            props.nextVids.map((nextvideos) => <Next
+            nextVids.map((nextvideos) => <Next
               channel={nextvideos.channel}
               image={nextvideos.image}
               title={nextvideos.title}

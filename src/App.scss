@@ -4,3 +4,18 @@
 @use "./styles/partials/keyframes" as *;
 @use "./styles/partials/global" as *;
 
+.main-content {
+  max-width: 80rem;
+  margin: 0 auto;
+
+  @include desktop {
+  display: flex;
+  }
+
+  &__next-vid-box {
+    
+    @include desktop {
+      border-left: 1px solid $mercury;
+    }
+  }
+}

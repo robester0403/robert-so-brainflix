@@ -3,7 +3,10 @@
 @use "../../styles/partials/variables" as *;
 
 .next {
-  margin: 0 1rem;
+
+  &__wrapper {
+    margin: 0 1rem;
+  }
 
   &__title {
     @include m-bdy-copy-style;
@@ -17,6 +20,10 @@
     margin: 0 auto;
     display: flex;
     padding-bottom: 1rem;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 
   &__card-img-ctnr {
@@ -33,7 +40,7 @@
 
   &__title {
     
-    width:58%;
+    width: 75%;
     color: black;
     font-weight: 600;
     padding-left: 1rem;

@@ -3,7 +3,7 @@ import './Comments.scss'
 function Comments(props) {
   console.log(props)
   return (
-    <section className="comment__wrap">
+    <section className="comments__wrap">
       <article className="comments__card">
         <div className="comments">
           <div className="comments__left">
