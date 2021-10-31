@@ -4,7 +4,7 @@
 
 .search {
   padding-top: 1rem;
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,13 @@
     padding-top: 0rem;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 1rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+  @include desktop{
+    max-width: 64rem;
+  }
+    
   }
 
   &__logo {
@@ -44,8 +50,8 @@
   }
   
   &__input {
-    width: 70%;
-    margin: 1rem;
+    width: 60%;
+    margin: 1rem 1rem 1rem 0;
     height: 2.5rem;
     font-size: 0.9rem;
     background-image: url(../../assets/images/Icons/search.svg);
@@ -93,7 +99,7 @@
 
 
   &__submit {
-    width: 92%;
+    width: 88%;
     height: 2.75rem;
     color: $white;
     background-color: $brainflix-blue;

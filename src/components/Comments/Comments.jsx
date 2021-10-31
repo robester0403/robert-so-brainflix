@@ -1,4 +1,5 @@
 import './Comments.scss'
+import { handleTime } from  "../../utils/Dateutils.js"
 
 function Comments(props) {
   console.log(props)
@@ -15,7 +16,7 @@ function Comments(props) {
                 {props.name}
               </h4>
               <h4 className="comments__date">
-                {props.timestamp}
+                {handleTime(props.timestamp)}
               </h4>
               <h4 className="comments__comment">
                 {props.comment}

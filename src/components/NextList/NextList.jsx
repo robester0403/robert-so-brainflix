@@ -14,6 +14,7 @@ function NextList({nextVids, onVidSelect}) {
         </h3>
           {
             nextVids.map((nextvideos) => <Next
+              key={nextvideos.id}
               channel={nextvideos.channel}
               image={nextvideos.image}
               title={nextvideos.title}
