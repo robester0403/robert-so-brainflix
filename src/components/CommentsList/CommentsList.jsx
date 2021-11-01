@@ -17,7 +17,6 @@ const CommentsList = (props) => {
             JOIN THE CONVERSATION
           </label>
           <textarea className="comment__form-comment">
-
           </textarea>
           <button className="comment__form-submit">
             COMMENT
@@ -26,19 +25,17 @@ const CommentsList = (props) => {
       </article>
     </section>
       {
-        props.comments.map(comment => <Comments
+        props.comments.map(comment => 
+          <Comments
             key={comment.id}
             name={comment.name}
             timestamp={comment.timestamp}
             comment={comment.comment}
           />
-          )
+        )
       }
     </>
   )
 }
-
-
-
 
 export default CommentsList;

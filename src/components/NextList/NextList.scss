@@ -1,6 +1,7 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
 
 .next {
   margin: 0 1rem;
@@ -18,5 +19,4 @@
       margin: 1.5rem 0;
     }
   }
-
 }

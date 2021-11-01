@@ -1,7 +1,6 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/keyframes" as *;
 @use "../../styles/partials/global" as *;
 
 .vid-det{
@@ -34,7 +33,6 @@
     @include desktop {
       padding: 1rem 1rem 0 0;
     }
-    
   }
       
   &__ch-date-ctnr {
@@ -73,6 +71,7 @@
     padding-right: 1rem;
     padding-top: auto;
     }
+
   &__view {
     padding-bottom: 1rem;
     color: $silver;
@@ -97,9 +96,9 @@
     padding: 1rem 0;
     @include m-bdy-copy-style;
   
-  @include desktop {
-    padding: 1rem 1rem 1rem 0;
-  }
+    @include desktop {
+      padding: 1rem 1rem 1rem 0;
+    }
   }
 
 }

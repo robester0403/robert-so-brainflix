@@ -1,6 +1,7 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
 
 .comment {
 
@@ -58,7 +59,12 @@
     border-radius: 4px;
     border: 1px solid $mercury;
 
+    &:active{
+    border: 1px solid $brainflix-darkblue;
+    }
+    
     @include tablet{
+      height: 1.5rem;
       @include dt-bdy-copy-style;
     }
   }

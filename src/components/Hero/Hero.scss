@@ -1,31 +1,25 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
-@use "../../styles/partials/keyframes" as *;
 @use "../../styles/partials/global" as *;
 
 .hero {
   background-color: black;
   width: 100%;
-  height: 15rem;
   display: flex;
   flex-direction: center;
 
   @include tablet {
-    height: 36rem;
+    height: 25rem;
   }
-
-  // &__ctnr{
-
-  // }
-
+  
   &__video {
     height: 100%;
     margin: 0 auto;
+    width: 100%;
 
-
-    @include tablet{
-
+    @include tablet {
+      width: auto;
     }
   }
 }

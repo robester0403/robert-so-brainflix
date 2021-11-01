@@ -1,6 +1,7 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
 
 .search {
   padding-top: 1rem;
@@ -16,10 +17,9 @@
     padding: 0 1rem;
     margin: 0 auto;
 
-  @include desktop{
-    max-width: 64rem;
-  }
-    
+    @include desktop{
+      max-width: 64rem;
+    }
   }
 
   &__logo {
@@ -69,7 +69,6 @@
     @include tablet {
       max-width: 14rem;
     }
-
   }
 
   &__avatar {
