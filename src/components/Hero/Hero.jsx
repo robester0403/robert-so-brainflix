@@ -2,10 +2,10 @@ import './Hero.scss';
 
 
 function Hero(props) {
-  console.log(props.selectedVid.image)
+  console.log(props.selectedVideo.image)
   return (
     <section className="hero">
-        <video poster={props.selectedVid.image} alt={`${props.selectedVid.title} Movie Poster`} controls className="hero__video">
+        <video poster={props.selectedVideo.image} alt={`${props.selectedVideo.title} Movie Poster`} controls className="hero__video">
           Your browser does not support the video tag.
         </video>
     </section>
