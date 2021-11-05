@@ -1,55 +1,55 @@
-// @use "../../styles/partials/colors" as *;
-// @use "../../styles/partials/mixins" as *;
-// @use "../../styles/partials/variables" as *;
-// @use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
 
-// .next {
+.next {
 
-//   &__wrapper {
-//     margin: 0 1rem;
-//   }
+  &__wrapper {
+    margin: 0 1rem;
+  }
 
-//   &__title {
-//     @include m-bdy-copy-style;
-//     color: $silver;
-//     margin-bottom: 0.5rem;
-//   }
+  &__title {
+    @include m-bdy-copy-style;
+    color: $silver;
+    margin-bottom: 0.5rem;
+  }
 
-//   &__card {
-//     @include m-bdy-copy-style;
-//     width: 21.5rem;
-//     margin: 0 auto;
-//     display: flex;
-//     padding-bottom: 1rem;
+  &__card {
+    @include m-bdy-copy-style;
+    width: 21.5rem;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 1rem;
 
-//     @include tablet {
-//       margin: 0;
-//     }
-//   }
+    @include tablet {
+      margin: 0;
+    }
+  }
 
-//   &__card-img-ctnr {
-//     min-width:45%;
-//   }
+  &__card-img-ctnr {
+    min-width:45%;
+  }
 
-//   &__card-img {
-//     border-radius: 5px;
-//     width: 100%;
-//     height: 6rem;
-//     background-color: $mercury;
-//     object-fit: cover;
-//   }
+  &__card-img {
+    border-radius: 5px;
+    width: 100%;
+    height: 6rem;
+    background-color: $mercury;
+    object-fit: cover;
+  }
 
-//   &__title {
+  &__title {
     
-//     width: 75%;
-//     color: black;
-//     font-weight: 600;
-//     padding-left: 1rem;
-//   }
+    width: 75%;
+    color: black;
+    font-weight: 600;
+    padding-left: 1rem;
+  }
 
-//   &__channel {
-//     color: black;
-//     font-weight: 400;
-//     padding-left: 1rem;
-//   }
-// }
+  &__channel {
+    color: black;
+    font-weight: 400;
+    padding-left: 1rem;
+  }
+}
