@@ -9,9 +9,6 @@ import './Home.scss';
 const API_URL = "https://project-2-api.herokuapp.com" 
 const API_KEY_STRING = "?api_key=<78719564-cc2a-4348-85e3-b4d530c557d7>"
 
-// Use get data to populate the state video
-// then default fill in selectedVid{}
-
 class Home extends Component {
   state = {
     videos : [],
@@ -25,10 +22,7 @@ class Home extends Component {
     this.setState({
       selectedVideo: response.data
     })
-    const filteredList = this.state.videos.filter(response => response.id !== videoId);
-    this.setState({
-      videos : filteredList
-    })
+
   })
   .catch((error)=> console.log(error))
 }
@@ -49,28 +43,17 @@ class Home extends Component {
     .catch((error)=> console.log(error) )
   }
 
-    //once state is changed the first time, it will call on componentDidUpdate 
-    //anytime state or props is changed again, componentDidUpdate will be called again 
-    //so when we click on a new link the props.match.params.id is update and thus componentDidUpdate will be read once more
-
-    //componentDidUpdate has access to the previous props, which means it can compare the plantId from the URL before the user clicked on the link and after the user clicked on the link 
-    componentDidUpdate(previousProps) {
-        const previousVideoId = previousProps.match.params.videoId
-        const currentVideoId = this.props.match.params.videoId
-
-        console.log(previousVideoId === currentVideoId)
-
-        if(previousVideoId !== currentVideoId) {
-            this.getSelectedVideo(currentVideoId)
-        
-        }
+  componentDidUpdate(previousProps) {
+    const previousVideoId = previousProps.match.params.videoId
+    const currentVideoId = this.props.match.params.videoId
+    console.log(previousVideoId === currentVideoId)
+    if(previousVideoId !== currentVideoId) {
+        this.getSelectedVideo(currentVideoId) 
     }
+  }
 
   render() {
-    // if (this.state.selectedVideo.comments === null) {
-    //   return false
-    // };
-
+    const filteredList = this.state.videos.filter(response => response.id !== this.state.selectedVideo.id);
     return (
       <>
         <Hero
@@ -78,22 +61,16 @@ class Home extends Component {
         />
         <section className="main-content">
           <article>
-            <Main
-              selectedVideo={this.state.selectedVideo}
-            />
-            {/* because if the state object is empty, it will evaluate to null which is falsey. 
-            && will make it so that the javascript only runs CommentList if the state object is NOT falsey */}
+            <Main selectedVideo={this.state.selectedVideo}/>
             {this.state.selectedVideo.comments && <CommentsList
-            // note this one is a bit different because we are accessing a deeper level
                 comments={this.state.selectedVideo.comments}
             />}
           </article>
           <article className="main-content__next-vid-box">
-            <NextList
-            // First we will try to load it with the entire array
+            {this.state.videos && <NextList
               onVideoSelect={this.state.selectedVideo}
-              nextVideos={this.state.videos}
-            /> 
+              nextVideos={filteredList}
+            /> }
           </article>
         </section>
       </>

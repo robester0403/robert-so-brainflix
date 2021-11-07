@@ -1,9 +1,11 @@
 import './Upload.scss';
 
 
-const Upload = () => {
+function Upload() {
   console.log()
-
+  const upload = () => {
+    alert("Great Upload!!");
+  }
 return (
   <>
     <section className="upload">
@@ -28,7 +30,7 @@ return (
             </label>
               <textarea className="">
               </textarea>
-            <button className="">
+            <button className="" onClick={upload}>
               PUBLISH
             </button>
           </form>
