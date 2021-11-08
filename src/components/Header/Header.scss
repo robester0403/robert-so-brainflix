@@ -5,7 +5,6 @@
 
 .search {
   padding-top: 1rem;
-  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,7 +97,7 @@
 
 
   &__submit {
-    width: 88%;
+    width: 18rem;
     height: 2.75rem;
     color: $white;
     background-color: $brainflix-blue;

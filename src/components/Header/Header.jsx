@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import logo from '../../assets/images/Logo/BrainFlix-logo.svg';
 import mohanavatar from '../../assets/images/Mohan-muruge.jpg';
 
-
 function Header() {
   const upload = () => {
     alert("Great Upload!!");
@@ -17,8 +16,8 @@ function Header() {
         <form className="search__innercontainer">
           <input className="search__input" type="text" name="search" placeholder="Search"/>
           <img className="search__avatar" src={mohanavatar} alt="Avatar" />
-              <Link to="/upload" className="search__submit">
-                <button className="search__submit" onClick={upload} >Upload</button>
+              <Link to="/upload" >
+                <button className="search__submit">Upload</button>
               </Link>
 
           <img className="search__avatar-tab-desk" src={mohanavatar} alt="Avatar" />

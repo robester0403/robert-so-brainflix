@@ -4,15 +4,164 @@
 @use "../../styles/partials/global" as *;
 
 .upload {
-
   border-top: 1px solid $mercury;
 
   &__wrap {
-    margin: 0 1rem;
+    padding: 0 1rem;
+    max-width: 64rem;
+    margin: 0 auto;
   }
 
   &__title {
-    margin: 1.5rem 0;
+    padding: 1.75rem 0;
     @include m-pg-hdr-style;
+
+    @include tablet {
+      @include dt-pg-hdr-style;
+      font-size: 2.25rem;
+      border-bottom: 1px solid $mercury;
+    }
+  }
+
+  &__container {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      border-bottom: 1px solid $mercury;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__img-title {
+    @include m-bdy-copy-style;
+    color: $silver;
+
+      @include tablet {
+        padding-top: 1.25rem;
+      }
+
+      @include desktop {
+        padding-top: 2rem;
+      }
+  }
+
+  &__img-ctnr {
+    object-fit: cover;
+    width: 100%;
+
+    @include tablet {
+      max-width: 26.5rem;
+    }
+    
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  &__form-inputs-wrapper {
+    width: 100%;
+  }
+
+  &__form-ctnr {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      margin-left: 2rem;
+    }
+
+  }
+    
+  &__form-title-label {
+    @include m-bdy-copy-style;
+    color: $silver;
+    padding-top: 1rem;
+
+    @include desktop {
+      padding-top: 2rem;
+    }
+  }
+
+  &__form-title-input {
+    @include m-bdy-copy-style;
+    height: 1.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid $mercury;
+    box-shadow: none;
+    padding: 1rem;
+
+    &:active{
+      border: 1px solid $brainflix-darkblue;
+      }
+  }
+
+  &__form-des-label {
+    @include m-bdy-copy-style;
+    color: $silver;
+    padding-top: 1rem;
+  }
+
+  &__form-des-input{
+    @include m-bdy-copy-style;
+    padding: 1rem;
+    height: 7rem;
+    margin-top: 0.25rem;
+    border: 1px solid $mercury;
+    box-shadow: none;
+
+    &:active{
+      border: 1px solid $brainflix-darkblue;
+      }
+  }
+
+  &__form-buttons-ctnr {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__form-publish {
+    margin-top: 1.5rem;
+    border: none;
+    height: 2.75rem;
+    width: 100%;
+    color: $white;
+    background-color: $brainflix-blue;
+    border: none;
+    font-size: 0.9rem;
+    background-image: url(../../assets/images/Icons/publish.svg);
+    background-repeat: no-repeat;
+    background-position: 5% center;
+    border-radius: 4px;
+
+    @include tablet {
+      width: 18rem;
+      height: 2.75rem;
+    }
+  }
+
+  &__form-cancel {
+    margin-top: 1.5rem;
+    border: none;
+    height: 2.75rem;
+    width: 100%;
+    color: $brainflix-blue;
+    background-color: $white;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 4px;
+
+    @include tablet {
+      width: 18rem;
+      height: 2.75rem;
+    }
   }
 }
