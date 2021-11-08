@@ -15,23 +15,19 @@ class Home extends Component {
     selectedVideo: {},
   };
 
-  // this function will hold the get request to get a specific plant using the specific plant endpoint. we can call it at any time and must pass in the plantID
   getSelectedVideo = (videoId) => {
     axios.get(`${API_URL}/videos/${videoId}${API_KEY_STRING}`)
   .then((response) => {
     this.setState({
       selectedVideo: response.data
     })
-
   })
   .catch((error)=> console.log(error))
 }
 
-// This runs perfectly so far with the home route. So loads whenever component home is called
   componentDidMount() {
     console.log("hello, this component has mounted")
 
-    // getting the videos. this get line is actually pretty static
     axios.get(`${API_URL}/videos${API_KEY_STRING}`)
     .then((response)=> {
       const videoId = this.props.match.params.videoId || response.data[0].id;

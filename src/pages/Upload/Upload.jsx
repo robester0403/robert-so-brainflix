@@ -11,7 +11,6 @@ return (
   <>
     <section className="upload">
       <article className="upload__wrap">
-        
         <h1 className="upload__title">
           Upload Video
         </h1>
@@ -40,14 +39,14 @@ return (
               </div>
             </form>
           </div>
-              <div className="upload__form-buttons-ctnr">
-                  <button className="upload__form-publish" onClick={upload}>
-                    PUBLISH
-                  </button>
-                  <button className="upload__form-cancel">
-                    CANCEL
-                  </button>
-                </div>
+            <div className="upload__form-buttons-ctnr">
+              <button className="upload__form-publish" onClick={upload}>
+                PUBLISH
+              </button>
+              <button className="upload__form-cancel">
+                CANCEL
+              </button>
+            </div>
       </article>
     </section>
   </>
