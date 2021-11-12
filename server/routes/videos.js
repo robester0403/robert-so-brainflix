@@ -8,6 +8,7 @@ router.route("/")
   .get((req, res) => {
       let videos = fs.readFileSync('./data/videos.json');
       videos = JSON.parse(videos);
+      console.log(videos)
       return res.json(videos);
   });
 
@@ -15,6 +16,7 @@ router.route("/:videoId")
   .get((req, res) => {
     let videodetails = fs.readFileSync('./data/videosdetails.json');
     videodetails = JSON.parse(videodetails);
+    console.log(videodetails)
     const selectedVideo = videodetails.find(video => video.id === req.params.videoId)
     return res.json(selectedVideo);
   })
@@ -23,9 +25,9 @@ router.route("/upload")
 .post((req, res) => {
   console.log("hello")
 
-    // let videosdetails = fs.readFileSync('./data/videosdetails.json');
-    // videosdetails = JSON.parse(videosdetails);
-    // console.log(videodetails);
+    let videosdetails = fs.readFileSync('./data/videosdetails.json');
+    videosdetails = JSON.parse(videosdetails);
+    console.log(videodetails);
 
     const newVideoDetails = {
         id: uuidv4(),
@@ -42,7 +44,7 @@ router.route("/upload")
     }
     console.log(newVideoDetails);
 
-    videos.push(newVideoDetails);
+    videosdetails.push(newVideoDetails);
     fs.writeFileSync('./data/videosdetails.json', JSON.stringify(videosdetails));
 
     res.status(201).json(newVideoDetails);
