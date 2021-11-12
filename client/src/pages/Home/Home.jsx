@@ -16,7 +16,8 @@ class Home extends Component {
   };
 
   getSelectedVideo = (videoId) => {
-    axios.get(`${API_URL}/videos/${videoId}${API_KEY_STRING}`)
+    // axios.get(`${API_URL}/api/videos/${videoId}${API_KEY_STRING}`) also no key anymore
+    axios.get(`http://localhost:8080/api/videos/${videoId}`)
   .then((response) => {
     this.setState({
       selectedVideo: response.data
@@ -28,7 +29,7 @@ class Home extends Component {
   componentDidMount() {
     console.log("hello, this component has mounted")
 
-    axios.get(`${API_URL}/videos${API_KEY_STRING}`)
+    axios.get(`http://localhost:8080/api/videos`)
     .then((response)=> {
       const videoId = this.props.match.params.videoId || response.data[0].id;
         this.setState({
