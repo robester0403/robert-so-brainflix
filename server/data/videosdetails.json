@@ -298,5 +298,18 @@
         "timestamp": 1632496261000
       }
     ]
+  },
+  {
+    "id": "207c5e49-66e3-4b45-81ed-b49ad7bc5e34",
+    "title": "adsdas",
+    "channel": "New Uploader",
+    "image": "https://images.unsplash.com/photo-1502744688674-c619d1586c9e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+    "description": "asdasda",
+    "views": 0,
+    "likes": 0,
+    "duration": "1:00",
+    "video": "https://project-2-api.herokuapp.com/stream",
+    "timestamp": 1636757311872,
+    "comments": []
   }
 ]

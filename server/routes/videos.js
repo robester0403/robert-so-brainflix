@@ -23,9 +23,9 @@ router.route("/upload")
 .post((req, res) => {
   console.log("hello")
 
-    // let videosdetails = fs.readFileSync('./data/videosdetails.json');
-    // videosdetails = JSON.parse(videosdetails);
-    // console.log(videodetails);
+    let videosdetails = fs.readFileSync('./data/videosdetails.json');
+    videosdetails = JSON.parse(videosdetails);
+    console.log(videosdetails);
 
     const newVideoDetails = {
         id: uuidv4(),
@@ -42,7 +42,7 @@ router.route("/upload")
     }
     console.log(newVideoDetails);
 
-    videos.push(newVideoDetails);
+    videosdetails.push(newVideoDetails);
     fs.writeFileSync('./data/videosdetails.json', JSON.stringify(videosdetails));
 
     res.status(201).json(newVideoDetails);
