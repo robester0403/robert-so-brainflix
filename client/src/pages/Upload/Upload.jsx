@@ -1,5 +1,5 @@
 import './Upload.scss';
-
+import { Link } from "react-router-dom";
 import axios from "axios";
 import uploadimg from '../../assets/images/upload.jpg';
 
@@ -55,9 +55,11 @@ return (
               <button className="upload__form-publish" type='submit' >
                 PUBLISH
               </button>
-              <button className="upload__form-cancel">
-                CANCEL
-              </button>
+              <Link to="/" >
+                <button className="upload__form-cancel">
+                  CANCEL
+                </button>
+              </Link>
             </form>
             
           </div>
