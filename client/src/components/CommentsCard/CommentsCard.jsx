@@ -1,7 +1,7 @@
-import './Comments.scss'
+import './CommentsCard.scss'
 import { handleTime } from  "../../utils/Dateutils.js"
 
-function Comments(props) {
+function CommentsCard(props) {
   return (
     <section className="comments__wrap">
       <article className="comments__card">
@@ -27,4 +27,4 @@ function Comments(props) {
   )
 }
 
-export default Comments;
+export default CommentsCard;

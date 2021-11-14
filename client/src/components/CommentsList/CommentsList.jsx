@@ -1,4 +1,4 @@
-import Comments from '../Comments/Comments';
+import CommentsCard from '../CommentsCard/CommentsCard';
 import './CommentsList.scss';
 import mohanavatar from '../../assets/images/Mohan-muruge.jpg';
 
@@ -25,7 +25,7 @@ const CommentsList = (props) => {
     </section>
       {
         props.comments.map(comment => 
-          <Comments
+          <CommentsCard
             key={comment.id}
             name={comment.name}
             timestamp={comment.timestamp}

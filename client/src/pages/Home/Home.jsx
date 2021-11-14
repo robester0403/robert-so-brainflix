@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { Component } from 'react';
-import Hero from '../../components/Hero/Hero';
+import VidPlayer from '../../components/VidPlayer/VidPlayer';
 import Main from '../../components/Main/Main';
 import CommentsList from '../../components/CommentsList/CommentsList';
-import NextList from '../../components/NextList/NextList';
+import NextVidsList from '../../components/NextVidsList/NextVidsList';
 import './Home.scss';
 
 const API_URL = "https://project-2-api.herokuapp.com" 
@@ -52,7 +52,7 @@ class Home extends Component {
     const filteredList = this.state.videos.filter(response => response.id !== this.state.selectedVideo.id);
     return (
       <>
-        <Hero
+        <VidPlayer
         selectedVideo={this.state.selectedVideo}
         />
         <section className="main-content">
@@ -63,7 +63,7 @@ class Home extends Component {
             />}
           </article>
           <article className="main-content__next-vid-box">
-            {this.state.videos && <NextList
+            {this.state.videos && <NextVidsList
               nextVideos={filteredList}
             /> }
           </article>

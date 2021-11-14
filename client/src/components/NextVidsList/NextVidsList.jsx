@@ -1,9 +1,7 @@
-import Next from '../Next/Next';
-import './NextList.scss'
+import NextVidCard from '../NextVidCard/NextVidCard';
+import './NextVidsList.scss'
 
-function NextList({nextVideos, onVideoSelect}) {
-
-
+function NextVidsList({nextVideos}) {
   return (
     <section className="next">
       <h3 className="next__header"> 
@@ -12,7 +10,7 @@ function NextList({nextVideos, onVideoSelect}) {
 
         {
           nextVideos.map((nextvideos) => 
-          <Next
+          <NextVidCard
             key={nextvideos.id}
             channel={nextvideos.channel}
             image={nextvideos.image}
@@ -24,4 +22,4 @@ function NextList({nextVideos, onVideoSelect}) {
   )
 }
 
-export default NextList;
+export default NextVidsList;

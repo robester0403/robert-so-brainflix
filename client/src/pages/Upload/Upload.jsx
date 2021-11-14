@@ -20,7 +20,7 @@ return (
                 VIDEO THUMBNAIL
               </h3>
               <div className="upload__img-inner-ctnr">
-                <img src={uploadimg} className="upload__img"/>
+                <img src={uploadimg} className="upload__img" alt="Example of upload"/>
               </div>
             </div>
             <form className="upload__form-inputs-wrapper">
