@@ -64,7 +64,6 @@ class Home extends Component {
           </article>
           <article className="main-content__next-vid-box">
             {this.state.videos && <NextList
-              onVideoSelect={this.state.selectedVideo}
               nextVideos={filteredList}
             /> }
           </article>

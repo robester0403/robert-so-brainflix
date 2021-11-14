@@ -3,7 +3,6 @@ import './CommentsList.scss';
 import mohanavatar from '../../assets/images/Mohan-muruge.jpg';
 
 const CommentsList = (props) => {
-  console.log(props)
   return (
     <>
     <section className="comment__wrap">

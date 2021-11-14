@@ -5,7 +5,11 @@
 
 .next {
   margin: 0 1rem;
+  @include m-bdy-copy-style;
 
+    @include tablet {
+      @include dt-bdy-copy-style
+    }
   &__header {
     @include m-bdy-copy-style;
     color: $silver;

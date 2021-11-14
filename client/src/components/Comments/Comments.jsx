@@ -2,7 +2,6 @@ import './Comments.scss'
 import { handleTime } from  "../../utils/Dateutils.js"
 
 function Comments(props) {
-  console.log(props)
   return (
     <section className="comments__wrap">
       <article className="comments__card">

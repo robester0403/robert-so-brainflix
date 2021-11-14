@@ -3,9 +3,9 @@ import './NextList.scss'
 
 function NextList({nextVideos, onVideoSelect}) {
 
-  console.log(onVideoSelect)
+
   return (
-    <section className="next__wrapper">
+    <section className="next">
       <h3 className="next__header"> 
         NEXT VIDEOS
       </h3>

@@ -1,9 +1,9 @@
 import './Upload.scss';
 import uploadimg from '../../assets/images/upload.jpg';
+import { Link } from "react-router-dom";
 
 
 function Upload() {
-  console.log()
   const upload = () => {
     alert("Great Upload!!");
   }
@@ -43,9 +43,11 @@ return (
               <button className="upload__form-publish" onClick={upload}>
                 PUBLISH
               </button>
-              <button className="upload__form-cancel">
-                CANCEL
-              </button>
+              <Link to="/">
+                <button className="upload__form-cancel">
+                  CANCEL
+                </button>
+              </Link>
             </div>
       </article>
     </section>

@@ -12,7 +12,6 @@ import { handleTime } from  "../../utils/Dateutils.js"
 
 
 function Main(props) {
-  console.log (props)
   return (
     <section className="vid-det">
       <h1 className="vid-det__hdr">
