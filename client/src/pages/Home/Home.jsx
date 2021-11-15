@@ -12,6 +12,12 @@ class Home extends Component {
     selectedVideo: {},
   };
 
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
   getSelectedVideo = (videoId) => {
 
     axios.get(`http://localhost:8080/api/videos/${videoId}`)
@@ -19,6 +25,7 @@ class Home extends Component {
     this.setState({
       selectedVideo: response.data
     })
+    this.scrollToTop()
   })
   .catch((error)=> console.log(error))
 }
