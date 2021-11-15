@@ -4,12 +4,9 @@ import logo from '../../assets/images/Logo/BrainFlix-logo.svg';
 import mohanavatar from '../../assets/images/Mohan-muruge.jpg';
 
 function Header() {
-  const upload = () => {
-    alert("Great Upload!!");
-  }
   return (
     <header className="search">
-      <Link to="/">
+      <Link to="/videos/84e96018-4022-434e-80bf-000ce4cd12b8">
         <img src={logo} className="search__logo" alt="BrainFlix Logo" />
       </Link>
       <div className="search__container">

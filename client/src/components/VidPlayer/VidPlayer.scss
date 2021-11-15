@@ -1,0 +1,25 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+
+.vidPlayer {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: center;
+
+  @include tablet {
+    height: 25rem;
+  }
+  
+  &__video {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+    }
+  }
+}
