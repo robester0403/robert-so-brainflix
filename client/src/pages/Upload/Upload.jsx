@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import uploadimg from '../../assets/images/upload.jpg';
 
-
-// class Upload extends Component {
 const Upload = () => {
 
   const handleSubmit = (e) => {

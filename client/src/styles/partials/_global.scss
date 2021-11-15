@@ -1,4 +1,5 @@
 @use "typography" as *;
+@use "mixins" as *;
 
 body {
   font-family: $font-stack;
@@ -20,4 +21,17 @@ h4 {
 h5 {
   margin: 0;
 
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+button {
+  @include m-lbls-btn-style;
+  
+  @include tablet {
+    @include dt-lbls-btn-style
+  }
 }

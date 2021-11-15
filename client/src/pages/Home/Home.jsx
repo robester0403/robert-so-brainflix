@@ -1,13 +1,10 @@
 import axios from 'axios';
 import { Component } from 'react';
-import Hero from '../../components/Hero/Hero';
+import VidPlayer from '../../components/VidPlayer/VidPlayer';
 import Main from '../../components/Main/Main';
 import CommentsList from '../../components/CommentsList/CommentsList';
 import NextList from '../../components/NextList/NextList';
 import './Home.scss';
-
-const API_URL = "https://project-2-api.herokuapp.com" 
-const API_KEY_STRING = "?api_key=<78719564-cc2a-4348-85e3-b4d530c557d7>"
 
 class Home extends Component {
   state = {
@@ -16,7 +13,7 @@ class Home extends Component {
   };
 
   getSelectedVideo = (videoId) => {
-    // axios.get(`${API_URL}/api/videos/${videoId}${API_KEY_STRING}`) also no key anymore
+
     axios.get(`http://localhost:8080/api/videos/${videoId}`)
   .then((response) => {
     this.setState({
@@ -27,7 +24,6 @@ class Home extends Component {
 }
 
   componentDidMount() {
-    console.log("hello, this component has mounted")
 
     axios.get(`http://localhost:8080/api/videos`)
     .then((response)=> {
@@ -43,7 +39,6 @@ class Home extends Component {
   componentDidUpdate(previousProps) {
     const previousVideoId = previousProps.match.params.videoId
     const currentVideoId = this.props.match.params.videoId
-    console.log(previousVideoId === currentVideoId)
     if(previousVideoId !== currentVideoId) {
         this.getSelectedVideo(currentVideoId) 
     }
@@ -53,7 +48,7 @@ class Home extends Component {
     const filteredList = this.state.videos.filter(response => response.id !== this.state.selectedVideo.id);
     return (
       <>
-        <Hero
+        <VidPlayer
         selectedVideo={this.state.selectedVideo}
         />
         <section className="main-content">

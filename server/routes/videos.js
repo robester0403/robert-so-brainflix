@@ -48,24 +48,5 @@ router.route("/upload")
     res.status(201).json(newVideoDetails);
 })
 
-// router.route("/")
-//     .post((req, res) => {
-//         let items = fs.readFileSync('./data/items.json');
-//         items = JSON.parse(items);
-
-
-//         // handle our request data and save it to our items
-//         const newItem = {
-//             id: uuidv4(),
-//             name: req.body.name,
-//             category: req.body.category
-//         }
-
-//         items.push(newItem);
-
-//         fs.writeFileSync('./data/items.json', JSON.stringify(items));
-
-//         res.status(201).json(newItem);
-//     })
 
 module.exports = router;
