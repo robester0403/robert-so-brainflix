@@ -6,7 +6,7 @@ import mohanavatar from '../../assets/images/Mohan-muruge.jpg';
 function Header() {
   return (
     <header className="search">
-      <Link to="/">
+      <Link to="/videos/84e96018-4022-434e-80bf-000ce4cd12b8">
         <img src={logo} className="search__logo" alt="BrainFlix Logo" />
       </Link>
       <div className="search__container">

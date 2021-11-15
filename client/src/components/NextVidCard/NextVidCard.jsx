@@ -1,7 +1,7 @@
-import './Next.scss'
+import './NextVidCard.scss'
 import { Link } from "react-router-dom";
 
-function Next ({ channel, image, title, id}) {
+function NextVidCard ({ channel, image, title, id}) {
   return (
     <>
       <Link to={`/videos/${id}`}>
@@ -24,4 +24,4 @@ function Next ({ channel, image, title, id}) {
   )
 }
 
-export default Next;
+export default NextVidCard;

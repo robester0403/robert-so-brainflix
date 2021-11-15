@@ -3,7 +3,7 @@ import { Component } from 'react';
 import VidPlayer from '../../components/VidPlayer/VidPlayer';
 import Main from '../../components/Main/Main';
 import CommentsList from '../../components/CommentsList/CommentsList';
-import NextList from '../../components/NextList/NextList';
+import NextVidList from '../../components/NextVidList/NextVidList';
 import './Home.scss';
 
 class Home extends Component {
@@ -59,7 +59,7 @@ class Home extends Component {
             />}
           </article>
           <article className="main-content__next-vid-box">
-            {this.state.videos && <NextList
+            {this.state.videos && <NextVidList
               nextVideos={filteredList}
             /> }
           </article>

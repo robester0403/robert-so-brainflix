@@ -6,7 +6,7 @@ const fs = require("fs");
 
 router.route("/")
   .get((req, res) => {
-      let videos = fs.readFileSync('./data/videos.json');
+      let videos = fs.readFileSync('./data/videosdetails.json');
       videos = JSON.parse(videos);
       return res.json(videos);
   });
